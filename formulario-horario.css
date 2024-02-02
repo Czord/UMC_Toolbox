@@ -1,0 +1,82 @@
+.form {
+  box-sizing: border-box;
+}
+.nombre-curso,
+.dias,
+.color,
+.desde,
+.hasta,
+.btn,
+.aula {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px;
+  width: 300px;
+}
+#nombre {
+  width: 95%;
+  height: 25px;
+}
+.desde,
+.hasta,
+.dias,
+.aula {
+  width: 150px;
+  box-sizing: border-box;
+}
+.titulo-form {
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 17px;
+}
+.titulo-form h2 {
+  color: #5b9bc3;
+}
+.form {
+  display: inline-block;
+  width: 100%;
+}
+form {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  height: 73.5px;
+  background-color: none;
+  font-size: 16px;
+}
+form select {
+  width: 90%;
+  font-size: 17px;
+  text-align: center;
+}
+.dias {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.color {
+  box-sizing: border-box;
+  width: 215px;
+}
+form label {
+  color: #5b9bc3;
+  font-size: 16.5px;
+}
+
+
+.btn {
+  box-sizing: border-box;
+  width: 100px;
+}
+form .agregar {
+  margin: none;
+  padding: 5px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background-color: #5FAAD9;
+  border-radius: 10px;
+}
+form .agregar:hover {
+  background-color: #033E8C;
+  cursor: pointer;
+}

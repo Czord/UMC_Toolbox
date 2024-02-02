@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digitaliza tu horario. 
+    Pensado para funcionar específicamente con los
+    bloques de hora utilizados por la UMC. El mismo
+    está sincronizado con un Mapa interactivo, lo que permitirá a los usuarios que
+    ya hayan creado su horario, ver la ubicación de un aula simplemente
+    seleccionando la materia correspondiente">
+    <meta name="keywords" content="horario, gestor de horario, umc, marítima, ToolBox">
+
+    <title>Gestor de Horario - UMC ToolBox</title>
+    
+    <link rel="shortcut icon" href="WhatsApp Image 2023-11-05 at 6.24.00 PM.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="estiloshorario.css">
+    <link rel="stylesheet" href="barra-lateral.css">
+    <link rel="stylesheet" href="formulario-horario.css">
+
+    <!--FONTAWESOME-->
+    <script src="all.js"></script>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Contact Us</a>
+            
+        </div>
+          <nav class="topnav">
+            <a href="#" onclick="openNav()"><i class="fas fa-bars"></i></a>
+          </nav>
+        
+        <header>
+            <div class="img">
+                <img src="img logo 72.jpg" width="100px" alt="UMC ToolBox" title="UMC ToolBox" name="UMC ToolBox">
+            </div>
+
+            <div class="title">
+                <h1>Gestor de Horario</h1>
+            </div>
+        </header>
+
+        <!--NAVEGADOR-->     
+        <div class="nav">
+            <nav>
+                <ul>
+                    <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/index.html" title="Ir al Inicio"><li><i class="fa-solid fa-house"></i> Inicio</li></a>
+                    <a href="#" title="Ir al Mapa interactivo"><li><i class="fa-solid fa-map"></i> Mapa interactivo</li></a>
+                    <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/agenda2.html" title="Ir a la Agenda"><li><i class="fa-solid fa-book"></i> Agenda</li></a>
+                    <a href="#" id="openPopup"><li><i class="fa-solid fa-user"></i> Ingresar</li></a>
+                    <div id="popup" class= "popup">
+                        <div class="popup-content">
+                            <span id="closePopup" class="close">&times;</span>
+                            <h2><i class="fa-solid fa-user"></i> Iniciar sesión</h2>
+                            <form>
+                                <label for="user">Ingrese su usuario: </label><br>
+                                <input type="text" id="user" placeholder=" Nombre de usuario" maxlength="15"><br>
+                                <label for="password">Ingrese su contraseña: </label><br>
+                                <input type="password" name="password" id="password" placeholder=" Contraseña" maxlength="8"><br>
+                            <!--POPUP REGISTRO-->
+                            
+                            <input type="submit" id="submit" value="Ingresar">
+                            <br>
+                            <input type="reset" id="reset" value="Limpiar">
+                            <br>
+                                <a class="enlace" href="#">¿Olvidó su contraseña?</a><br>
+                                <a class="enlace" id="openPopup2">¿No se ha registrado?</a> 
+                                    <div id="popup2" class= "popup2">
+                                        <div class="popup-content2">
+                                            <span id="closePopup2" class="close2">&times;</span>
+                                            <h2><i class="fa-solid fa-user"></i> Registrarse</h2>
+                            <!--FORMULARIO REGISTRO-->
+                                            <form>
+                                                <label for="user2">Nombre de usuario:</label><br>
+                                                <input type="text" id="user2" placeholder=" Nombre de usuario" maxlength="20">
+                                                <br>
+                                                <label for="password2">Contraseña:</label>
+                                                <br>
+                                                <input type="password" id="password2" placeholder=" Contraseña" maxlength="20">
+                                                <br>
+                                                <label for="email">Correo electrónico:</label>
+                                                <br>
+                                                <input type="email" id="email" placeholder=" Correo electrónico"><br>
+
+                                        <!--CARRERAS OPCIONES DESPLEGABLES-->
+                                                <label for="carrera">Selecciona tu carrera:</label>
+                                                
+                                                    <select name="Carreras" id="carrera">
+                                                        <option value="Ing-Marítima" id="Ing-Marítima">Ing Marítima</option>
+                                                        <option value="Ing-Informática" id="Ing-Informática">Ing Informática</option>
+                                                        <option value="Ing-Ambiental" id="Ing-Ambiental">Ing Ambiental</option>
+                                                        <option value="Lic-Administración" id="Lic-Administración">Lic Administración</option>
+                                                        <option value="Lic-Turismo" id="Lic-Turismo">Lic Turismo</option>
+                                                        <option value="Otro">Otro</option>
+                                                    </select>
+                                                    <br>
+                                        <!--BOTONES SUMBIT Y CLEAR-->
+                                                <input type="submit" id="submit2" value="Registrarse">
+                                                <br>
+                                                <input type="reset" id="reset2" value="Limpiar">
+                                            </form>
+                                        </div>
+                                    </div> <!--FIN POPUP REGISTRO-->
+                            </form>
+                        </div>
+                    </div>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!--SVG OLA-->
+    
+        <div style="height: 60px; overflow: hidden";><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M-6.49,72.52 C150.00,150.00 270.60,28.12 502.54,77.47 L500.00,0.00 L0.00,0.00 Z"
+             style="stroke: none; fill: #F7F7F7;"></path></svg></div>
+    
+            <div class="form-horario">
+                <div class="form">
+                    <div class="titulo-form">
+                        <h2>Agregar unidad curricular</h2> 
+                    </div>
+                    <br>
+                    <p title="Sólo podrá ingresar un curso por vez.
+Incluso si es un mismo curso con varios días de clase.">Ayuda</p>
+                    <form>
+                        <div class="nombre-curso">
+                            <label for="nombre" title="Establezca el nombre del curso que desea introducir en su horario">Nombre del curso:</label>
+                            <br>
+                            <input type="text" placeholder="Nombre del curso" id="nombre">
+                        </div>
+
+                        <div class="dias">
+                            <label id="dias" for="dia" title="Establezca el día de la semana que verá ese curso">Día:</label>
+                            <br>
+                            <select name="dias" id="dias">
+                                <option value="Lun">Lun</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Mie">Mie</option>
+                                <option value="Jue">Jue</option>
+                                <option value="Vie">Vie</option>
+                                <option value="Sab">Sab</option>
+                                <option value="Dom">Dom</option>
+                            </select>
+                          </div>
+                
+                        <div class="desde">
+                            <label for="hora-inicio" title="Establezca la hora de inicio del curso ese día correspondiente">Desde:</label>
+                            <br>
+                            <select name="hora-inicio" id="hora-inicio">
+                                <option value="07:15">07:15</option>
+                                <option value="08:00">08:00</option>
+                                <option value="08:45">08:45</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:15">10:15</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:45">12:45</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:15">14:15</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:45">15:45</option>
+                                <option value="16:30">16:30</option>
+                            </select>
+                        </div>
+              
+                        <div class="hasta">
+                            <label for="hora-fin" title="Establezca la hora de finalización del curso ese día correspondiente">Hasta:</label>
+                            <br>
+                            <select name="hora-fin" id="hora-fin">
+                                <option value="08:00">08:00</option>
+                                <option value="08:45">08:45</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:15">10:15</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:45">11:45</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:15">14:15</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:45">15:45</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:15">17:15</option>
+                            </select>
+                        </div>
+
+                        <div class="aula">
+                            <label for="aula" title="Establezca el aula en que verá el curso correspondiente,
+ésta se verá reflejada en el mapa interactivo para ayudarlo a guiarse">Aula:</label>
+                            <br>
+                            <select name="aula" id="aula">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            </select>
+                        </div>
+              
+                        <div class="color" title="Color de la etiqueta a su gusto">
+                            <label for="color">Color de etiqueta: </label>
+                            <br>
+                            <input type="color" name="color" id="color">
+                        </div>
+                      
+                        <div class="btn">
+                            <input type="submit" class="agregar" value="Agregar">
+                        </div>
+                    </form>
+                  </div>
+                
+        <div class="horario">
+            <section id = "horario">
+                <table>
+                    <thead>
+                        <tr style="color: white;">
+        
+                            <th id="days" style="background-color: lightblue;">Hor</th>
+                            <th id="days" style="background-color: lightblue;">Lun</th>
+                            <th id="days" style="background-color: lightblue;">Mar</th>
+                            <th id="days" style="background-color: lightblue;">Mié</th>
+                            <th id="days" style="background-color: lightblue;">Jue</th>
+                            <th id="days" style="background-color: lightblue;">Vie</th>
+                            <th id="days" style="background-color: lightblue;">Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                07:15 <br> 08:00
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                08:00 <br> 08:45
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                08:45 <br> 09:30
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                09:30 <br> 10:15
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                10:15 <br> 11:00
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                11:00 <br> 11:45
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                12:45 <br> 13:30
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                13:30 <br> 14:15
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                14:15 <br> 15:00
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                15:00 <br> 15:45
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #EAEEF7;">
+                            <td><a href="#">
+                                15:45 <br> 16:30
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #D2DDEF;">
+                            <td><a href="#">
+                                16:30 <br> 17:15
+                            </a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            </div>
+        </div>
+    </div>
+
+<!--SCRIPT POPUP 1-->
+    <script>
+        document.getElementById("openPopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+    });
+
+        document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+    });
+    </script>
+<!--SCRIPT POPUP 2-->
+    <script>
+        document.getElementById("openPopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "block";
+        });
+
+        document.getElementById("closePopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "none";
+        });
+    </script>
+
+<!--BARRA LATERAL-->
+<script>
+    function openNav() {
+        document.getElementById("sideNavigation").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    function closeNav() {
+        document.getElementById("sideNavigation").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+</body>
+</html>

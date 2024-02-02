@@ -1,0 +1,245 @@
+    /*CSS POPUP 1*/
+    .popup {    /*FONDO OSCURO*/
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .popup-content {    /*VENTANA*/
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        height: auto;
+        box-sizing: border-box;
+        line-height: 40px;
+        display: block;
+        font-size: 16px;
+    }
+    .popup-content h2 {
+        text-align: center;
+        color: #033E8C;
+        font-size: 2.5em;
+    }
+    .popup-content #user,
+    .popup-content #password {
+        width: 70%;
+        height: 30px;
+        font-size: 15px;
+    }
+    .popup-content label {
+        color: #033E8C;
+        text-align: start;
+    }
+    .popup-content #submit,
+    .popup-content #reset {
+        width: 70%;
+        margin: none;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #5FAAD9;   
+    }
+    .popup-content #submit:hover,
+    .popup-content #reset:hover {
+        background-color: #033E8C;
+    }
+    .popup-content #submit:active,
+    .popup-content #reset:active {
+        color: black;
+    }
+
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /*CSS POPUP 2*/
+    .popup2 {   /*FONDO OSCURO*/
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .popup-content2 {   /*VENTANA*/
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 2% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        height: auto;
+        box-sizing: border-box;
+        line-height: 40px;
+        display: block;
+        font-size: 16px;
+    }
+    .popup-content2 h2 {
+        text-align: center;
+        color: 033E8C;
+        font-size: 2.5em;
+    }
+    .popup-content2 #user2,
+    .popup-content2 #password2,
+    .popup-content2 #email {
+        width: 70%;
+        height: 30px;
+        font-size: 16px;
+    }
+    .popup-content label {
+        color: #5FAAD9;
+        font-size: 1.1rem;
+    }
+    .popup-content2 #submit2,
+    .popup-content2 #reset2 {
+        width: 70%;
+        margin: none;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #5FAAD9;    
+    }
+    .popup-content2 #submit2:hover,
+    .popup-content2 #reset2:hover {
+        background-color: #033E8C;
+    }
+    #openPopup2:hover{
+        cursor: pointer;
+    }
+    .enlace {
+        text-decoration: underline;
+    }
+    .close2 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close2:hover,
+    .close2:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /*CSS POPUP 3*/
+    .popup3 {   /*FONDO OSCURO*/
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .popup-content3 {   /*VENTANA*/
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 2% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        height: auto;
+        box-sizing: border-box;
+        line-height: 40px;
+        display: block;
+        font-size: 16px;
+        text-align: center;
+    }
+    .popup-content3 h2 {
+        text-align: center;
+        color: #033E8C;
+        font-size: 2.5em;
+    }
+    .popup-content3 #nombre,
+    .popup-content3 #descripcion {
+        width: 70%;
+    }
+    .popup-content3 #descripcion {
+        font-size: 15px;
+    }
+    .popup-content3 label {
+        color: #5FAAD9;
+        font-size: 1.1rem;
+    }
+    .popup-content3 #todo-dia,
+    .popup-content3 #Avisarme {
+        color: black;
+        font-size: 1em;
+    }
+    .popup-content3 #Avisarme {
+        width: 40%;
+    }
+    .popup-content3 #todo-dia:hover {
+        cursor: pointer;
+    }
+
+    .popup-content3 select {
+        height: 30px;
+        width: 30%;
+    }
+
+    .popup-content3 #submit3,
+    .popup-content3 #reset3 {
+        width: 70%;
+        margin: none;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #5FAAD9;    
+    }
+    .popup-content3 #submit3:hover,
+    .popup-content3 #reset3:hover {
+        background-color: #033E8C;
+    }
+    #openPopup3:hover{
+        cursor: pointer;
+    }
+    .enlace {
+        text-decoration: underline;
+    }
+    .close3 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close3:hover,
+    .close3:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

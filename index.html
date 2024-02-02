@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UMC ToolBox.
+    Es un sitio web desarrollado para facilitar el día a día de los estudiantes
+    de la Universidad Experimental
+    Marítima del Caribe(UMC), consta de mapa interactivo, gestor de horario y agenda">
+    <meta name="keywords" content="UMC, umc, marítima de caribe, marítima, agenda, mapa interactivo, mapa, horario, gestor de horario">
+
+    <title>UMC ToolBox</title>
+<!--ICONO-->
+    <link rel="shortcut icon" href="WhatsApp Image 2023-11-05 at 6.24.00 PM.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="UMC ToolBox.css">
+    <link rel="stylesheet" href="barra-lateral.css">
+
+    <!--FONTAWESOME-->
+    <script src="all.js"></script>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    
+    <div class="contenedor">
+<!--BARRA LATERAL-->
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Notificaciones</a>
+            <a href="#">Contáctanos</a>
+        </div>
+          <nav class="topnav">
+            <a href="#" onclick="openNav()"><i class="fas fa-bars"></i></a>
+          </nav>
+
+<!--HEADER-->
+        <header>
+            <div class="img">
+                <img src="img logo 72.jpg" width="100px" alt="UMC ToolBox" title="UMC ToolBox" name="UMC ToolBox">
+            </div>
+
+            <div class="title">
+                <h1>UMC ToolBox</h1>
+            </div>
+        </header>
+        
+        <!--NAVEGADOR-->     
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/Horario%20UMC%20Toolbox.html" title="Ir al Gestor de Horario"><li class="first-icon"><i class="fa-solid fa-calendar-days"></i> Gestión de horario</li></a>
+                        <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/mapa-interactivo.html" title="Ir al Mapa interactivo"><li><i class="fa-solid fa-map"></i> Mapa interactivo</li></a>
+                        <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/agenda2.html" title="Ir a la Agenda"><li><i class="fa-solid fa-book"></i> Agenda</li></a>
+                        <a href="#" id="openPopup"><li><i class="fa-solid fa-user"></i> Ingresar</li></a>
+                        <div id="popup" class= "popup">
+                            <div class="popup-content">
+                                <span id="closePopup" class="close">&times;</span>
+                                <h2><i class="fa-solid fa-user"></i> Iniciar sesión</h2>
+                                <form>
+                                    <label for="user">Ingrese su usuario: </label><br>
+                                    <input type="text" id="user" placeholder=" Nombre de usuario" maxlength="15"><br>
+                                    <label for="password">Ingrese su contraseña: </label><br>
+                                    <input type="password" name="password" id="password" placeholder=" Contraseña" maxlength="8"><br>
+                                <!--POPUP REGISTRO-->
+                                
+                                <input type="submit" id="submit" value="Ingresar">
+                                <br>
+                                <input type="reset" id="reset" value="Limpiar">
+                                <br>
+                                    <a class="enlace" id="openPopup2">¿No se ha registrado?</a> 
+                                        <div id="popup2" class= "popup2">
+                                            <div class="popup-content2">
+                                                <span id="closePopup2" class="close2">&times;</span>
+                                                <h2><i class="fa-solid fa-user"></i> Registrarse</h2>
+                                    <!--FORMULARIO REGISTRO-->
+                                                <form>
+                                                    <label for="user2">Nombre de usuario:</label><br>
+                                                    <input type="text" id="user2" placeholder=" Nombre de usuario" maxlength="20">
+                                                    <br>
+                                                    <label for="password2">Contraseña:</label>
+                                                    <br>
+                                                    <input type="password" id="password2" placeholder=" Contraseña" maxlength="20">
+                                                    <br>
+                                                    <label for="email">Correo electrónico:</label>
+                                                    <br>
+                                                    <input type="email" id="email" placeholder=" Correo electrónico"><br>
+
+                                            <!--CARRERAS OPCIONES DESPLEGABLES-->
+                                                    <label for="carrera">Selecciona tu carrera:</label>
+                                                    <br>
+                                                        <select name="Carreras" id="carrera">
+                                                            <option value="Ing-Marítima" id="Ing-Marítima">Ing Marítima</option>
+                                                            <option value="Ing-Informática" id="Ing-Informática">Ing Informática</option>
+                                                            <option value="Ing-Ambiental" id="Ing-Ambiental">Ing Ambiental</option>
+                                                            <option value="Lic-Administración" id="Lic-Administración">Lic Administración</option>
+                                                            <option value="Lic-Turismo" id="Lic-Turismo">Lic Turismo</option>
+                                                            <option value="Otro">Otro</option>
+                                                        </select>
+                                                        <br>
+                                            <!--BOTONES SUMBIT Y CLEAR-->
+                                                    <input type="submit" id="submit2" value="Registrarse">
+                                                    <br>
+                                                    <input type="reset" id="reset2" value="Limpiar">
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--FIN POPUP REGISTRO-->
+                                    <a class="enlace" href="#">¿Olvidó su contraseña?</a>
+                                </form>
+                            </div>
+                        </div>
+
+                    </ul>
+                </nav>
+            </div>
+        <!--FIN DEL NAVEGADOR Y HEADER-->
+
+        <!--SVG OLA-->
+        <div style="height: 60px; overflow: hidden";><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M-6.49,72.52 C150.00,150.00 270.60,28.12 502.54,77.47 L500.00,0.00 L0.00,0.00 Z"
+             style="stroke: none; fill: #F7F7F7;"></path></svg></div>
+             
+        <!--SECTION MAIN-->
+        <div id="info">
+            <div class="que">
+                <h2>¿Qué es y qué ofrece UMC ToolBox?</h2><br>
+                <p>Es un sitio web desarrollado para facilitar el día a día de los estudiantes
+                de la Universidad Experimental
+                Marítima del Caribe(UMC), tanto a los de nuevo ingreso como los que no. UMC ToolBox 
+                contará con tres aplicaciones principales, las cuales serán descritas a continuación:
+            </div>
+            <br>
+            
+            <div class="info">  <!--CONTENEDOR DEL MAIN-->
+                <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/Horario%20UMC%20Toolbox.html" target="_blank" title="Ir al Gestor de Horario"><div class="gestor">
+                    <h2>Gestor de Horarios</h2><br>
+                    <p><strong>No te pierdas una clase. Digitaliza tu horario con el <i>Gestor de Horario</i></strong>. 
+                    Está pensado para funcionar específicamente con los
+                    bloques de hora utilizados por la UMC. El mismo
+                    está sincronizado con un Mapa interactivo, lo que permitirá a los usuarios que
+                    ya hayan creado su horario, ver la ubicación de un aula simplemente
+                    seleccionando la materia correspondiente.</p>
+                    <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/Horario%20UMC%20Toolbox.html" class="ver-enlace" target="_blank">Ver...</a>
+                </div></a>
+            <br>
+                <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/mapa-interactivo.html" target="_blank" title="Ir al Mapa interactivo"><div class="mapa">
+                    <h2>Mapa interactivo</h2><br>
+                    <p><strong>¡Que no te manden a talleres! Encuentra tu aula con nuestro <i>Mapa Interactivo</i></strong>. A diferencia 
+                    del mapa oficial que se
+                    encuentra en las instalaciones, este está dibujado usando como referencia una
+                    foto satelital de la universidad Marítima del caribe, haciendo de esta forma que
+                    sea más sencillo orientarse con el mismo, además de contar con la posibilidad
+                    de seleccionar edificios específicos y ver las aulas o puntos de interés de cada
+                    piso. Por último, la función más útil de este mapa será la de búsqueda, que
+                    permitirá a los usuarios escribir el número o nombre de algún salón o
+                    laboratorio y ubicarlo directamente en el mapa.</p>
+                    <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/mapa-interactivo.html" class="ver-enlace" target="_blank">Ver...</a>
+                </div></a>
+            <br>
+                <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/agenda2.html" target="_blank" title="Ir a la Agenda"><div class="agenda">
+                    <h2>Agenda</h2><br>
+                    <p><strong>¿Te cuesta organizarte? Lleva el control de tus evaluaciones usando la <i>Agenda</i></strong>.
+                    Permitirá a los usuarios ingresar las fechas de sus evaluaciones para poder
+                    visualizarlas de una forma más sencilla. Esta agenda estará sincronizada con
+                    el calendario académico lo que permitirá a los estudiantes estar al tanto de las
+                    fechas importantes de la universidad.</p>
+                    <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/agenda2.html" class="ver-enlace" target="_blank">Ver...</a>
+                </div></a>
+            </div>    
+        </div>
+    </div>
+
+    <!--SCRIPT POPUP 1-->
+    <script>
+        document.getElementById("openPopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+    });
+
+        document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+    });
+</script>
+<!--SCRIPT POPUP 2-->
+<script>
+    document.getElementById("openPopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "block";
+    });
+
+        document.getElementById("closePopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "none";
+    });
+</script>
+
+<!--BARRA LATERAL-->
+<script>
+        function openNav() {
+            document.getElementById("sideNavigation").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+            document.getElementById("sideNavigation").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

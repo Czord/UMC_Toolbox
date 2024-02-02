@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo - UMC ToolBox</title>
+<!--ICONO-->
+    <link rel="shortcut icon" href="WhatsApp Image 2023-11-05 at 6.24.00 PM.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="mapa-interactivo.css">
+    <link rel="stylesheet" href="barra-lateral.css">
+    
+    <script src="all.js"></script>
+    <link rel="stylesheet" href="all.css">
+
+</head>
+<body>
+    
+<div class="contenedor">
+    <!--BARRA LATERAL-->
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul><!--SITIOS DE INTERÉS DEL MAPA EN LA BARRA LATERAL-->
+                <h2>Sitios de interés</h2>
+                <li><a href="#">Aula Magna</a></li>
+                <li><a href="#">Usos múltiples</a></li>
+                <li><a href="#">Rectorado</a></li>
+                <li><a href="#">S. Consejo</a></li>
+                <li><a href="#">Comedor Alumnos</a></li>
+                <li><a href="#">Gimnasio</a></li>
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Cabaña</a></li>
+                <li><a href="#">Edif. Administrativo</a></li>
+                <li><a href="#">Patio de honor</a></li>
+                <li><a href="#">Cabaña</a></li>
+                <li><a href="#">Coord. FT</a></li>
+                <li><a href="#">B.E</a></li>
+                <li><a href="#">Comedor Admon</a></li>
+                <li><a href="#">Cocina</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">La gruta</a></li>
+                <li><a href="#">Cancha de basket</a></li>
+                <li><a href="#">Campo de beisbol</a></li>
+                <li><a href="#">Campo de futbol</a></li>
+                <li><a href="#">S. Profesores</a></li>
+            </ul>
+        </div>
+          <nav class="topnav">
+            <a href="#" onclick="openNav()"><i class="fas fa-bars" title="Sitios de interés"></i></a>
+          </nav>
+
+    <!--HEADER-->
+        <header>
+            <div class="img">
+                <img src="img logo 72.jpg" width="100px" alt="UMC ToolBox" title="UMC ToolBox" name="UMC ToolBox">
+            </div>
+
+            <div class="title">
+                <h1>Mapa interactivo</h1>
+            </div>
+        </header>
+
+    <!--NAVEGADOR-->     
+    <div class="nav">
+    <nav>
+        <ul>
+            <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/index.html" title="Ir al Inicio"><li><i class="fa-solid fa-house"></i> Inicio</li></a>
+            <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/Horario%20UMC%20Toolbox.html" title="Ir al Gestor de Horario"><li class="first-icon"><i class="fa-solid fa-calendar-days"></i> Gestión de horario</li></a>
+            <a target="_blank" href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/agenda2.html" title="Ir a la Agenda"><li><i class="fa-solid fa-book"></i> Agenda</li></a>
+            <a href="#" id="openPopup"><li><i class="fa-solid fa-user"></i> Ingresar</li></a>
+            <div id="popup" class= "popup">
+                <div class="popup-content">
+                    <span id="closePopup" class="close">&times;</span>
+                    <h2><i class="fa-solid fa-user"></i> Iniciar sesión</h2>
+                    <form>
+                        <label for="user">Ingrese su usuario: </label><br>
+                        <input type="text" id="user" placeholder=" Nombre de usuario" maxlength="15"><br>
+                        <label for="password">Ingrese su contraseña: </label><br>
+                        <input type="password" name="password" id="password" placeholder=" Contraseña" maxlength="8"><br>
+                    <!--POPUP REGISTRO-->
+                    
+                    <input type="submit" id="submit" value="Ingresar">
+                    <br>
+                    <input type="reset" id="reset" value="Limpiar">
+                    <br>
+                        <a class="enlace" id="openPopup2">¿No se ha registrado?</a> 
+                            <div id="popup2" class= "popup2">
+                                <div class="popup-content2">
+                                    <span id="closePopup2" class="close2">&times;</span>
+                                    <h2><i class="fa-solid fa-user"></i> Registrarse</h2>
+                        <!--FORMULARIO REGISTRO-->
+                                    <form>
+                                        <label for="user2">Nombre de usuario:</label><br>
+                                        <input type="text" id="user2" placeholder=" Nombre de usuario" maxlength="20">
+                                        <br>
+                                        <label for="password2">Contraseña:</label>
+                                        <br>
+                                        <input type="password" id="password2" placeholder=" Contraseña" maxlength="20">
+                                        <br>
+                                        <label for="email">Correo electrónico:</label>
+                                        <br>
+                                        <input type="email" id="email" placeholder=" Correo electrónico"><br>
+
+                                <!--CARRERAS OPCIONES DESPLEGABLES-->
+                                        <label for="carrera">Selecciona tu carrera:</label>
+                                        <br>
+                                            <select name="Carreras" id="carrera">
+                                                <option value="Ing-Marítima" id="Ing-Marítima">Ing Marítima</option>
+                                                <option value="Ing-Informática" id="Ing-Informática">Ing Informática</option>
+                                                <option value="Ing-Ambiental" id="Ing-Ambiental">Ing Ambiental</option>
+                                                <option value="Lic-Administración" id="Lic-Administración">Lic Administración</option>
+                                                <option value="Lic-Turismo" id="Lic-Turismo">Lic Turismo</option>
+                                                <option value="Otro">Otro</option>
+                                            </select>
+                                            <br>
+                                <!--BOTONES SUMBIT Y CLEAR-->
+                                        <input type="submit" id="submit2" value="Registrarse">
+                                        <br>
+                                        <input type="reset" id="reset2" value="Limpiar">
+                                    </form>
+                                </div>
+                            </div>
+                            <!--FIN POPUP REGISTRO-->
+                        <a class="enlace" href="#">¿Olvidó su contraseña?</a>
+                    </form>
+                </div>
+            </div>
+
+        </ul>
+    </nav>
+    </div>
+    <!--FIN DEL NAVEGADOR Y HEADER-->
+
+    <section class="menu-mapa">
+        <div class="sitios">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6305130.716446691!2d-107.2322623125!3d39.49920510624427!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sve!4v1703528399312!5m2!1ses!2sve" width="1349" height="467" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</div>
+
+<!--SCRIPT POPUP 1-->
+<script>
+    document.getElementById("openPopup").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "block";
+});
+
+    document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+});
+</script>
+<!--SCRIPT POPUP 2-->
+<script>
+    document.getElementById("openPopup2").addEventListener("click", function() {
+    document.getElementById("popup2").style.display = "block";
+});
+
+    document.getElementById("closePopup2").addEventListener("click", function() {
+    document.getElementById("popup2").style.display = "none";
+});
+</script>
+
+<!--BARRA LATERAL-->
+<script>
+    function openNav() {
+        document.getElementById("sideNavigation").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    function closeNav() {
+        document.getElementById("sideNavigation").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+</body>
+</html>

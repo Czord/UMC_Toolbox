@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contenedor {
+    background-color: lightblue;
+}
+header {
+    display: inline-block;
+    width: 100%;
+    height: 106px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+}
+header .img {
+    display: inline-block;
+    width: 20%;
+    height: 106px;
+    float: left;
+    box-sizing: border-box;
+}
+header img {
+    position: relative;
+    left: 28%;
+}
+
+header h1 {
+    text-align: start;
+    font-size: 4em;
+    line-height: 106px;
+    color: #033E8C;
+}
+header .title {
+    display: inline-block;
+    width: 80%;
+    height: 106px;
+    box-sizing: border-box;
+}
+.nav {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+nav {
+    display: inline-block;
+    line-height: 80px;
+    box-sizing: border-box;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #033E8C;
+    font-size: 17px;
+    height: 70px;
+    width: 250px;
+    text-align: center;
+}
+nav li:hover{
+    color: #5FAAD9;
+    cursor: pointer;
+}
+nav li:active {
+    color: #888;
+}
+
+#info {
+    box-sizing: border-box;
+    padding: 20px 20px;
+    display: inline-block;
+}
+#info h2 {
+    text-align: center;
+    color: #033E8C;
+}
+#info h2 {
+    font-size: 3em;
+}
+#info p {
+    text-align: center;
+    color: black;
+    font-size: 1.3em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#info .que,
+#info .gestor,
+#info .mapa,
+#info .agenda {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+}
+.info a {
+    text-decoration: none;
+}
+
+#info .gestor:hover,
+#info .mapa:hover,
+#info .agenda:hover,
+#info .foro:hover {
+    background-color: rgba(0, 0, 0, 0.202);
+}
+.info .ver-enlace {
+    font-size: 1.3em;
+}
+.info .ver-enlace:hover {
+    color: white;
+}
+
+    /*CSS POPUP 1*/
+    .popup {    /*FONDO OSCURO*/
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .popup-content {    /*VENTANA*/
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        height: auto;
+        box-sizing: border-box;
+        line-height: 40px;
+        display: block;
+        font-size: 16px;
+    }
+    .popup-content h2 {
+        text-align: center;
+        color: #033E8C;
+        font-size: 2.5em;
+    }
+    .popup-content #user,
+    .popup-content #password {
+        width: 70%;
+        height: 30px;
+        font-size: 15px;
+    }
+    .popup-content label {
+        color: #033E8C;
+        text-align: start;
+    }
+    .popup-content #submit,
+    .popup-content #reset {
+        width: 70%;
+        margin: none;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #5FAAD9;   
+    }
+    .popup-content #submit:hover,
+    .popup-content #reset:hover {
+        background-color: #033E8C;
+    }
+    .popup-content #submit:active,
+    .popup-content #reset:active {
+        color: black;
+    }
+
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /*CSS POPUP 2*/
+    .popup2 {   /*FONDO OSCURO*/
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .popup-content2 {   /*VENTANA*/
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 2% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        height: auto;
+        box-sizing: border-box;
+        line-height: 40px;
+        display: block;
+        font-size: 16px;
+    }
+    .popup-content2 h2 {
+        text-align: center;
+        color: #033E8C;
+        font-size: 2.5em;
+    }
+    .popup-content2 #user2,
+    .popup-content2 #password2,
+    .popup-content2 #email {
+        width: 70%;
+        height: 30px;
+        font-size: 16px;
+    }
+    .popup-content label {
+        color: #5FAAD9;
+        font-size: 1.1rem;
+    }
+    .popup-content2 #submit2,
+    .popup-content2 #reset2 {
+        width: 70%;
+        margin: none;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #5FAAD9;    
+    }
+    .popup-content2 #submit2:hover,
+    .popup-content2 #reset2:hover {
+        background-color: #033E8C;
+    }
+    #openPopup2:hover{
+        cursor: pointer;
+    }
+    .enlace {
+        text-decoration: underline;
+    }
+    .close2 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close2:hover,
+    .close2:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    form #carrera {
+        color: black;
+        width: 40%;
+        text-align: center;
+        font-size: 15px;
+        border: none;
+        height: 30px;
+        background-color: #EAEEF7;
+    }
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1200px) {
+    header .img {
+        width: 15%;
+    }
+    header img {
+        left: 6%;
+    }
+    nav {
+        width: 100%;
+    }
+    nav li {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 800px) {
+    nav li {
+        width: 180px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 700px) {
+    header .img {
+        width: 30%;
+    }
+    header .title {
+        width: 70%;
+    }
+    nav li {
+        font-size: 15px;
+        width: 170px;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav li {
+        width: 140px;
+    }
+    header h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .contenedor .nav {
+        height: 380x;
+    }
+    nav li {
+        width: 200px;
+    }
+    .contenedor header h1 {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 460px) {
+    .contenedor header h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .contenedor header .img {
+        text-align: end;
+        width: 138px;
+    }
+    .contenedor .title {
+        width: 300px;
+    }
+    .nav {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 400px) {
+    header {
+        height: 212px;
+    }
+    header .img {
+        width: 100%;
+    }
+    header img {
+        left: 37%;
+    }
+    header .title {
+        width: 100%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    nav li {
+        width: 100%;
+        font-size: 16px;
+    }
+    .nav {
+        height: auto;
+    }
+    #info {
+        padding: 20px 20px;
+    }
+}
+@media screen and (max-width: 412px) {
+    header {
+        height: 212px;
+    }
+    .nav {
+        height: 220px;
+    }
+    header .img {
+        width: 100%;
+        text-align: start;
+    }
+    header img {
+        left: 37%;
+    }
+    header .title {
+        width: 100%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    .popup-content #user,
+    .popup-content #password,
+    .popup-content2 #user2,
+    .popup-content2 #password2,
+    .popup-content2 #email,
+    .popup-content2 #submit2,
+    .popup-content2 #reset2,
+    .popup-content #submit,
+    .popup-content #reset,
+    form #carrera {
+        width: 100%;
+    }
+    .popup-content {
+       width: 90%;
+    }
+    .popup-content2 {
+        width: 90%;
+    }
+    
+}
+@media screen and (max-width: 360px){
+         .nav {
+            height: 300px;
+        }
+        .contenedor header .img {
+            text-align: end;
+        }
+        .contenedor header {
+            height: 200px;
+        }
+    }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lleva el control de tus evaluaciones.
+    Permitirá a los usuarios de la UMC ingresar las fechas de sus evaluaciones para poder
+    visualizarlas de una forma más sencilla. Esta agenda estará sincronizada con
+    el calendario académico lo que permitirá a los estudiantes estar al tanto de las
+    fechas importantes de la universidad">
+    <meta name="keywords" content="umc, agenda, ToolBox, marítima, UMC">
+
+    <title>Agenda - UMC ToolBox</title>
+
+<!--ICONO-->
+    <link rel="shortcut icon" href="WhatsApp Image 2023-11-05 at 6.24.00 PM.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="agenda2.css">
+    <link rel="stylesheet" href="barra-lateral.css">
+    <link rel="stylesheet" href="popup-agenda.css">
+
+    <script src="all.js"></script>
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+<div class="contenedor">
+        <!--BARRA LATERAL-->
+                <div id="sideNavigation" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+                  <nav class="topnav">
+                    <a href="#" onclick="openNav()"><i class="fas fa-bars"></i></a>
+                  </nav>
+        
+        <header>
+            <div class="img">
+                <img src="img logo 72.jpg" width="100px" alt="UMC ToolBox" title="UMC ToolBox" name="UMC ToolBox">
+            </div>
+        
+            <div class="title">
+                <h1>Agenda</h1>
+            </div>
+        </header>
+                
+    <!--NAVEGADOR-->     
+    <div class="nav">
+        <nav>
+            <ul>
+                <a href="file:///C:/Users/Windows10/Desktop/DEVELOPE/UMC-ToolBox/index.html" title="Ir al Inicio"><li><i class="fa-solid fa-house"></i> Inicio</li></a>
+                <a target="_blank" href="http://localhost/program%20PHP/Horario%20UMC%20ToolBox.php" title="Ir al Gestor de Horario"><li class="first-icon"><i class="fa-solid fa-calendar-days"></i> Gestión de horario</li></a>
+                <a target="_blank" href="http://localhost/program%20PHP/mapa-interactivo.php" title="Ir al Mapa interactivo"><li><i class="fa-solid fa-map"></i> Mapa interactivo</li></a>
+                <a href="#" id="openPopup"><li><i class="fa-solid fa-user"></i> Ingresar</li></a>
+                    <div id="popup" class= "popup">
+                        <div class="popup-content">
+                            <span id="closePopup" class="close">&times;</span>
+                            <h2><i class="fa-solid fa-user"></i> Iniciar sesión</h2>
+                            <form>
+                                <label for="user">Ingrese su usuario: </label><br>
+                                <input type="text" id="user" placeholder=" Nombre de usuario" maxlength="15"><br>
+                                <label for="password">Ingrese su contraseña: </label><br>
+                                <input type="password" name="password" id="password" placeholder=" Contraseña" maxlength="8"><br>
+                        <!--POPUP REGISTRO-->
+                                        
+                                <input type="submit" id="submit" value="Ingresar">
+                                <br>
+                                <input type="reset" id="reset" value="Limpiar">
+                                <br>
+                                <a class="enlace" id="openPopup2">¿No se ha registrado?</a> 
+                                    <div id="popup2" class= "popup2">
+                                        <div class="popup-content2">
+                                            <span id="closePopup2" class="close2">&times;</span>
+                                            <h2><i class="fa-solid fa-user"></i> Registrarse</h2>
+                                <!--FORMULARIO REGISTRO-->
+                                        <form>
+                                            <label for="user2">Nombre de usuario:</label><br>
+                                            <input type="text" id="user2" placeholder=" Nombre de usuario" maxlength="20">
+                                            <br>
+                                            <label for="password2">Contraseña:</label>
+                                            <br>
+                                            <input type="password" id="password2" placeholder=" Contraseña" maxlength="20">
+                                            <br>
+                                            <label for="email">Correo electrónico:</label>
+                                            <br>
+                                            <input type="email" id="email" placeholder=" Correo electrónico"><br>
+        
+                                <!--CARRERAS OPCIONES DESPLEGABLES-->
+                                            <label for="carrera">Selecciona tu carrera:</label>
+                                            <br>
+                                                <select name="Carreras" id="carrera">
+                                                    <option value="Ing-Marítima" id="Ing-Marítima">Ing Marítima</option>
+                                                    <option value="Ing-Informática" id="Ing-Informática">Ing Informática</option>
+                                                    <option value="Ing-Ambiental" id="Ing-Ambiental">Ing Ambiental</option>
+                                                    <option value="Lic-Administración" id="Lic-Administración">Lic Administración</option>
+                                                    <option value="Lic-Turismo" id="Lic-Turismo">Lic Turismo</option>
+                                                    <option value="Otro">Otro</option>
+                                                </select>
+                                                <br>
+                                    <!--BOTONES SUMBIT Y CLEAR-->
+                                                <input type="submit" id="submit2" value="Registrarse">
+                                                <br>
+                                                <input type="reset" id="reset2" value="Limpiar">
+                                        </form>
+                                        </div>
+                                    </div> <!--FIN POPUP REGISTRO-->
+                                <a class="enlace" href="#">¿Olvidó su contraseña?</a>
+                            </form>
+                        </div>
+                    </div>
+            </ul>
+        </nav>
+    </div>
+                
+                <!--SVG OLA-->
+    <div style="height: 60px; overflow: hidden";><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+    <path d="M-6.49,72.52 C150.00,150.00 270.60,28.12 502.54,77.47 L500.00,0.00 L0.00,0.00 Z"
+    style="stroke: none; fill: #F7F7F7;"></path></svg></div>
+                     
+    <!--SECTION MAIN-->
+    <div class="agenda">
+        <div class="prev" title="Mes anterior"><button><i class="fa-solid fa-arrow-up" id="prev-month"></i></button></div>
+        <div class="month" id="month"></div>
+        <div class="year" id="year"></div>
+        <div class="next" title="Mes siguiente"><button><i class="fa-solid fa-arrow-down" id="next-month"></i></button></div>
+
+        <!--FORMULARIO AGREGAR (POST)-->
+            <form method="POST" class="agenda">
+                <h2>AGREGAR EVENTO</h2>
+                <label for="nombre" class="nombre">Nombre del evento:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre de la tarea">
+                <label for="date" class="fecha-hora">Fecha y hora:</label>
+                        
+                <!--TODO EL DÍA-->
+                <input type="checkbox" name="todo-dia" id="todo-dia"><label for="todo-dia" id="todo-dia"> Todo el día</label>
+
+                <input type="datetime-local" name="fecha" id="date">
+                <label for="Avisarme" id="Avisarme">Avisarme:</label>
+                <select>
+                    <option>Nunca</option>
+                    <option>5 minutos antes</option>
+                    <option>10 minutos antes</option>
+                    <option>15 minutos antes</option>
+                    <option>30 minutos antes</option>
+                    <option>1 hora antes</option>
+                    <option>12 horas antes</option>
+                    <option>1 día antes</option>
+                    <option>1 semana antes</option>
+                </select>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" cols="20" rows="1" maxlength="100"></textarea>
+                <input type="submit" id="submit" value="Enviar">
+                <input type="reset" id="reset" value="Limpiar">
+            </form>
+    </div>
+
+    <div class="tabla">
+        <section id = "tabla">
+            <table>
+                <thead>
+                    <tr style="color: white;">
+                        <th id="days" class="col1" style="background-color: lightblue;">Evento - Fecha y Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> <!--FILA-->
+                        <td> <!--COLUMNA 1-->
+                            <div class="evento" style="border-radius: 10px; border: 3px outset #033E8C; padding: 3px">
+                                <a href="#">
+                                <br>
+                                <h3>Título evento</h3>
+                                <p>Hora y fecha</p>
+                                <p>Descripcion - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, culpa. Exercitationem blanditiis placeat, esse obcaecati eveniet, asperiores animi maiores itaque eum consequatur dolor, cum rerum? Velit rerum illo sed. Placeat.</p>
+                                </a>
+                                <!--ICONO DE EDITAR-->
+                                <a href="agenda2.php?id=<?php echo $dato['id']?>">
+                                <i class="fa-solid fa-pen" title="Editar"></i></a>
+                            </div><br>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</div><!--CIERRE DEL CONTENEDOR-->
+
+<!--Enlace fecha y flechas de la agenda-->
+<script src="agenda.js"></script>
+
+<!--SCRIPT POPUP 1-->
+<script>
+        document.getElementById("openPopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+    });
+
+        document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+    });
+</script>
+<!--SCRIPT POPUP 2-->
+<script>
+        document.getElementById("openPopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "block";
+    });
+
+        document.getElementById("closePopup2").addEventListener("click", function() {
+        document.getElementById("popup2").style.display = "none";
+    });
+</script>
+
+<!--BARRA LATERAL-->
+<script>
+    function openNav() {
+        document.getElementById("sideNavigation").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    function closeNav() {
+        document.getElementById("sideNavigation").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+</body>
+</html>

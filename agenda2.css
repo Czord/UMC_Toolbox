@@ -1,0 +1,372 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contenedor {
+    background-color: lightblue;
+    box-sizing: border-box;
+}
+header {
+    display: inline-block;
+    width: 100%;
+    height: 106px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+}
+header .img {
+    display: inline-block;
+    width: 20%;
+    height: 106px;
+    float: left;
+    box-sizing: border-box;
+}
+header img {
+    position: relative;
+    left: 28%;
+}
+
+header h1 {
+    text-align: start;
+    font-size: 4em;
+    line-height: 106px;
+    color: #033E8C;
+}
+header .title {
+    display: inline-block;
+    width: 80%;
+    height: 106px;
+    box-sizing: border-box;
+}
+.nav {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+nav {
+    display: inline-block;
+    line-height: 80px;
+    box-sizing: border-box;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #033E8C;
+    font-size: 17px;
+    height: 70px;
+    width: 300px;
+    text-align: center;
+}
+nav li:hover{
+    color: #5FAAD9;
+    cursor: pointer;
+}
+nav li:active {
+    color: #888;
+}
+
+
+.nav {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+form #carrera {
+    color: black;
+    width: 40%;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    height: 30px;
+    background-color: #EAEEF7;
+}
+
+
+    /*ESTILOS DE LA AGENDA*/
+    .agenda,
+    .agenda .prev,
+    .agenda .month,
+    .agenda .year,
+    .agenda .next {
+        display: inline-block;
+    }
+    .agenda .month,
+    .agenda .year {
+        color: #033E8C;
+        font-size: 1.2em;
+    }
+    .agenda {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+    .agenda button {
+        width: 30px;
+    }
+    .agenda button:hover {
+        cursor: pointer;
+    }
+    .agenda #submit,
+    .agenda #reset {
+        height: 35px;
+        background-color: #5FAAD9;
+        font-size: 1em;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 10px;
+    }
+    .agenda #submit:hover,
+    .agenda #reset:hover {
+        cursor: pointer;
+        background-color: #033E8C;
+    }
+    .agenda #descripcion {
+        resize: none;
+    }
+    .agenda #nombre,
+    .agenda #date {
+        height: 30px;
+    }
+    .agenda select {
+        height: 30px;
+    }
+    
+    /*Agenda*/
+    .tabla {
+        margin: 0px 20px;
+        box-sizing: border-box;
+    }
+    #tabla table {
+        width: 100%;
+    }
+    #tabla table thead tr .col1 {
+        width: 20%;
+    }
+
+    #tabla table thead tr #days {
+        height: 30px;
+        color: #033E8C;
+        font-size: 25px;
+    }
+    #tabla table tbody tr td {
+        width: 100%;
+        height: 100px;
+    }
+    #tabla table tbody tr {
+        width: 100%;
+    }
+    #tabla table tbody tr a {
+        text-decoration: none;
+        color: black;
+    }
+    #tabla table tbody tr a:hover {
+        color: #033E8C;
+    }
+
+    #tabla table tbody tr .evento h3 {
+        font-size: 1.5em;
+    }
+    #tabla table tbody {
+        width: 100%;
+        height: 300px;
+    }
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1200px) {
+    header .img {
+        width: 15%;
+    }
+    header img {
+        left: 6%;
+    }
+    nav {
+        width: 100%;
+    }
+    nav li {
+        width: 200px;
+    }
+    .agenda #descripcion {
+        resize: none;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    nav ul a li {
+        width: 200px;
+    }
+    .agenda #nombre {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 800px) {
+    nav li {
+        width: 180px;
+        font-size: 16px;
+    }
+    nav ul a li {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 700px) {
+    header .img {
+        width: 30%;
+    }
+    header .title {
+        width: 70%;
+    }
+    header .title h1 {
+        text-align: center;
+    }
+    nav li {
+        font-size: 15px;
+    }
+    nav ul a li {
+        width: 160px;
+    }
+    .agenda #nombre {
+        width: 285px;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav li {
+        width: 140px;
+    }
+    header h1 {
+        text-align: center;
+    }
+    nav ul a li {
+        width: 200px;
+    }
+    .contenedor .nav {
+        height: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .nav {
+        height: 155px;
+    }
+    nav li {
+        width: 200px;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+    header .img {
+        text-align: end;
+        width: 138px;
+    }
+}
+@media screen and (max-width: 460px) {
+    header h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .agenda #nombre,
+    .agenda #descripcion,
+    .agenda label {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    header {
+        height: 212px;
+    }
+    header .img {
+        width: 100%;
+    }
+    header img {
+        left: 37%;
+    }
+    header .title {
+        width: 100%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    nav li {
+        width: 100%;
+        font-size: 18px;
+    }
+    .nav {
+        height: 320px;
+    }
+    #info {
+        padding: 20px 20px;
+    }
+    .agenda #nombre,
+    .agenda #descripcion,
+    .agenda label {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 412px) {
+    header {
+        height: 120px;
+    }
+    header .img {
+        display: none;
+    }
+    header img {
+        left: 37%;
+    }
+    header .title {
+        width: 100%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    .popup-content #user,
+    .popup-content #password,
+    .popup-content2 #user2,
+    .popup-content2 #password2,
+    .popup-content2 #email,
+    .popup-content2 #submit2,
+    .popup-content2 #reset2,
+    .popup-content #submit,
+    .popup-content #reset,
+    form #carrera {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    .contenedor .nav {
+        height: 300px;
+    }
+    .agenda #nombre,
+    .agenda #descripcion,
+    .agenda label {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .contenedor .nav {
+        height: 300px;
+    }
+    .contenedor header .img {
+        text-align: start;
+        width: 300px;
+    }
+    .contenedor header {
+        height: 100px;
+    }
+}
